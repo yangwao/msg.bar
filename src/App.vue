@@ -1,7 +1,7 @@
 <template>
 <div id="main">
-      <div class="columns">
-            <div class="column">
+      <div class="columns is-mobile">
+            <div class="column is-narrow">
                   <div class="crop">
                         <a href="https://progressbar.sk">
                               <img src="./assets/progressbar-logo.svg" alt="progressbar logo">
@@ -10,15 +10,19 @@
 
             </div>
       </div>
-      <div class="columns is-mobile">
-            <form action="http://msg.bar" method="POST">
-                  <div class="column">
-                        <input class="button is-primary is-outlined is-large" type="submit" value="Display" />
+      <form action="http://msg.bar" method="POST">
+            <div class="columns is-mobile">
+                  <div class="column is-narrow">
                         <a href="https://donate.progressbar.sk">
-                              <button class="button is-warning is-outlined is-large">Send 💰⛓ donation</button>
+                              <button class="button is-warning is-outlined">Send 💰⛓ donation</button>
                         </a>
                   </div>
                   <div class="column">
+                        <input class="button is-primary is-outlined" type="submit" value="Display" />
+                  </div>
+            </div>
+            <div class="columns is-mobile">
+                  <div class="column is-narrow">
                         <div class="field">
                               <label class="label"></label>
                               <div class="control">
@@ -32,8 +36,8 @@
                         </div>
 
                   </div>
-            </form>
-      </div>
+            </div>
+      </form>
 </div>
 </template>
 
