@@ -1,7 +1,7 @@
 <template>
 <div id="main">
       <div class="columns is-mobile">
-            <div class="column is-narrow">
+            <div class="column">
                   <div class="crop">
                         <a href="https://progressbar.sk">
                               <img src="./assets/progressbar-logo.svg" alt="progressbar logo">
@@ -26,7 +26,7 @@
                         <div class="field">
                               <label class="label"></label>
                               <div class="control">
-                                    <textarea autofocus name="msg" rows="5" class="textarea" placeholder="🤘 type
+                                    <textarea autofocus name="msg" rows="5" cols="16" class="textarea" placeholder="🤘 type
 🛰 something
 🌐 here
 🔐 hit
