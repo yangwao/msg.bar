@@ -34,14 +34,13 @@
                                     </textarea>
                               </div>
                         </div>
-
                   </div>
             </div>
             <div class="columns is-mobile">
-              <div class="column is-narrow">
-                <a @click="getBTCprice()" class="button is-outlined is-warning">Get Bitcoin price</a>
-                <a @click="postBTCprice()" class="button is-outlined is-warning">Show Bitcoin price</a>
-              </div>
+                  <div class="column is-narrow">
+                        <a @click="getBTCprice()" class="button is-outlined is-warning">Get Bitcoin price</a>
+                        <a @click="postBTCprice()" class="button is-outlined is-warning">Show Bitcoin price</a>
+                  </div>
             </div>
       </form>
 </div>
@@ -52,6 +51,9 @@ import axios from 'axios';
 
 export default {
   name: 'app',
+  data() {
+    bitcoinPrice = 1
+  },
   methods: {
     postBTCprice(price) {
       axios({
@@ -64,16 +66,16 @@ export default {
     },
     getBTCprice() {
       axios({
-        method: 'get',
-        baseURL: 'https://blockchain.info/ticker'
-      })
-      .then(response => {
-        console.log(response);
-        this.bitcoinPrice = response.USD.last
-      })
-      .catch(e => {
-        console.log(e);
-      })
+          method: 'get',
+          baseURL: 'https://blockchain.info/ticker'
+        })
+        .then(response => {
+          console.log(response);
+          this.bitcoinPrice = response.USD.last
+        })
+        .catch(e => {
+          console.log(e);
+        })
     }
   }
 }
